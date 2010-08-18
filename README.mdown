@@ -69,4 +69,4 @@ Extracted modules from the Posterous Blog Importer. Used for conforming RSS Feed
 
 ## Copyright
 
-Copyright (c) 2010 Christopher Burnett. See LICENSE for details.
+Copyright (c) 2010 Posterous Inc. See LICENSE for details.
