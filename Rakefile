@@ -15,6 +15,7 @@ begin
     gem.add_development_dependency "mocha"
     
     gem.add_dependency "nokogiri", ">= 1.4.2"
+    gem.add_dependency "sinatra"
     gem.add_dependency "feedtools", ">= 0.2.29"
     gem.add_dependency "vegas",           "~> 0.1.2"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
