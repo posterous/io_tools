@@ -10,7 +10,7 @@ begin
     gem.email = "signalstatic@gmail.com"
     gem.homepage = "http://github.com/posterous/io_tools"
     gem.authors = ["Christopher Burnett"]
-    
+    gem.executables = "io-server"
     gem.add_development_dependency "rspec", ">= 1.2.9"
     gem.add_development_dependency "mocha"
     

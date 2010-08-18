@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "bin/io-server",
+     "io_tools.gemspec",
      "lib/io_tools.rb",
      "lib/io_tools/helpers.rb",
      "lib/io_tools/helpers/rss_feed.rb",
