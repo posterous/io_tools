@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__) + '/../lib')
+require 'server/server'
+
+begin
+  require 'vegas'
+rescue LoadError
+  require 'rubygems'
+  require 'vegas'
+end  
+
+Vegas::Runner.new(IoTools::Server, 'io_server')
+

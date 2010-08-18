@@ -1,0 +1,71 @@
+!!!
+%html
+  %head
+    %title
+      Importer
+    %script{:src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js', :type => 'text/javascript'}
+    %script{:src => '/javascripts/app.js', :type => 'text/javascript'}
+    %link{:type => 'text/css', :rel=>"stylesheet", :href => '/stylesheets/app.css' }
+
+  %body
+    #container
+      #header
+        %h2 Export Tools
+      #main
+
+        #chooser
+          %p
+            %select{:id => 'service'}
+              %option{ :value => '' }
+                Choose Blog Service:
+              %option{ :value => 'posterous_api_importer' }
+                Posterous API
+              %option{ :value => 'posterous_feed_importer' }
+                Posterous Feed
+
+          %form.login_info{:style => 'display:none', :id => 'posterous_api_importer', :method => "POST"}
+            %p
+              %label
+                Email:
+              %input{:name => "username", :type => 'text', :value => '',:class=>"text_field"}
+            %br{:clear => "all"}
+            %p
+              %label
+                Password:
+              %input{:name => "password", :type => 'password', :value => '',:class=>"text_field"}
+            %p
+              %label
+                Hostname:
+              %input{:name => "hostname", :type => 'text', :value => '',:class=>"text_field"}
+              %input{:name => "service", :type => 'hidden', :value => 'posterous_api_importer',:class=>"text_field"}
+         
+
+            %p
+              %input{:id => "submit_btn",:value => 'Export', :type => "submit"}
+              
+            %br{:clear => "all"}
+
+          %form.login_info{:style => 'display:none', :id => 'posterous_feed_importer', :method => "POST"}
+            %p
+              %label
+                Site URL:
+              %input{:name => "feed_url", :type => 'text', :value => '',:class=>"text_field"}
+              %input{:name => "service", :type => 'hidden', :value => 'posterous_feed_importer',:class=>"text_field"}
+
+
+            %p
+              %input{:id => "submit_btn",:value => 'Export', :type => "submit"}
+
+            %br{:clear => "all"}  
+          
+          
+          
+          #loading{:style => 'display:none'}
+            %p Loading...
+            
+            
+          %br{:clear => "all"}
+          #posts
+           
+      %br{:clear => "all"}
+

@@ -1,0 +1,72 @@
+## io_tools ##
+
+
+
+Extracted modules from the Posterous Blog Importer. Used for conforming RSS Feeds or results from one API to another.
+
+## Installation ##
+
+    gem install io_tools
+
+## Usage ##
+
+  Include the Importer.
+  
+    class PosterousImporter
+      include IoTools::Importer      
+    end
+    
+  The Importer gives you a way to structure your import code. Moving data from one API to another consists of two *basic* steps, Collecting and Conforming. The rest of the work usually ends up being specific to the API that you are dealing with. So look in the `lib/server/importers` directory for how to deal with more complicated APIs that require helper methods.
+  
+  The `collect` method.
+  
+    class PosterousImporter
+      include IoTools::Importer
+      
+      collect :feed_items
+      
+      def feed_items
+        [{:title => "Fancy Post", :body => "Is fancy."}]
+      end
+      
+    end
+    
+  The `collect` method accepts a method name as a `symbol` or a block that will provide an `Array` of results from the API or feed. This method does not have to do all the work, all it needs to do is return an `Array`.
+  
+  Hey wait, what format do the results have to be in?
+  
+  It doesn't matter. This is where our friend the `conform` method comes in.
+  
+    class PosterousImporter
+      include IoTools::Importer
+      
+      collect :feed_items
+      
+      conform do |incoming, conformed|
+        conformed.title         = incoming[:title]
+        conformed.body          = incoming[:body]
+        conformed
+      end
+      
+      def feed_items
+        [{:title => "Fancy Post", :body => "Is fancy."}]
+      end
+      
+    end
+    
+  The conform method is called for every entry in the `Array` that is created by the `collect` method. This is where you turn crazy camelcase field names from weird APIs into nice clean attributes that suit your systems needs. `conform` is passed the incoming item from the `Array` produced by the `collect` method. Along with an empty `Openstruct` to hold whatever values your system needs. These in turn will populate the final `conformed_collection`.
+  
+
+## Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+## Copyright
+
+Copyright (c) 2010 Christopher Burnett. See LICENSE for details.

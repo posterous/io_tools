@@ -1,0 +1,18 @@
+%h4 Exported JSON 
+%textarea{:id => "xml_export"}
+  = @posts.to_json
+
+%h4 Posts
+- @posts.each do |post|
+  .post
+    .post_title
+      %h4 Title
+      %p
+        = "#{post.title} - #{post.display_date}"
+    .post_body
+      %h4 Body
+      = post.body
+    .post_tags
+      %h4 Tags
+      %p
+        = post.tags.join(",") unless post.tags.nil?

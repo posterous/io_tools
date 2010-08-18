@@ -1,0 +1,164 @@
+body {font-size: 16px; line-height: 1.25em; margin: 0; padding: 0; }
+
+html, body {background: #eee url(/images/bg.png); font-family: "helvetica neue", arial, sans-serif}
+
+h1 {margin: 0; font-size: 1.5em; line-height: 0.833em; margin-bottom: 0.833em}
+h2 {margin: 0; font-size: 1.375em; line-height: 0.909em; margin-bottom: 0.909em}
+h3 {margin: 0; font-size: 1.25em; line-height: 1em; margin-bottom: 1em}
+h4 {margin: 0; font-size: 1.125em; line-height: 1.111em; margin-bottom: 1.111em}
+
+p, ul, blockquote, pre, td, th, label {margin: 0; font-size: 1em; line-height: 1.25em; margin-bottom: 1.25em}
+
+.panel {border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; -khtml-border-radius: 8px; behavior: url(stylesheets/border-radius.htc); box-shadow: 0 0 2px #eeeeee; -moz-box-shadow: 0 0 2px #eeeeee; -webkit-box-shadow: 0 0 2px #eeeeee; -khtml-box-shadow: 0 0 2px #eeeeee; border: 1px solid #ccc; background-color: #fff; margin-bottom: 1.25em}
+.panel .panel_title {-moz-border-radius-topleft: 8px; border-top-left-radius: 8px; -webkit-border-top-left-radius: 8px; -khtml-border-top-left-radius: 8px; -moz-border-radius-topright: 8px; border-top-right-radius: 8px; -webkit-border-top-right-radius: 8px; -khtml-border-top-right-radius: 8px; background: white url(/images/panel_title_bg.gif) 0 bottom repeat-x; line-height: 47px; font-size: 1.125em; color: #4b4f5d; font-weight: bold; padding: 0 24px; border-bottom: 1px solid #ccc; box-shadow: 0 0 2px #eeeeee; -moz-box-shadow: 0 0 2px #eeeeee; -webkit-box-shadow: 0 0 2px #eeeeee; -khtml-box-shadow: 0 0 2px #eeeeee; text-shadow: #fff 0px 1px 0px;}
+.panel .panel_title .octocat {vertical-align: middle; margin-right: 5px}
+.panel .panel_title a.add-new {float: right; font-size: 0.667em; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -khtml-border-radius: 3px; behavior: url(stylesheets/border-radius.htc); border: 1px solid #ccc; line-height: 1.667em; padding: 5px 7px; margin: 8px 0 0 5px; background: #d4d4d4 url(/images/gray-gradient-pagination-bg.png) 0 0 repeat-x; color: #4B4F5D}
+.panel .panel_title a.add-new:hover {box-shadow: 0 1px 3px #666666; -moz-box-shadow: 0 1px 3px #666666; -webkit-box-shadow: 0 1px 3px #666666; -khtml-box-shadow: 0 1px 3px #666666; border-color: #ccc; background-image: none; background-color: #fff}
+.panel .panel_content {padding: 1em}
+
+#container {
+  width:450px; 
+  margin:auto; 
+  border-bottom:1px #ccc solid;
+  clear:right;
+}
+
+
+#header {
+  border-bottom:1px solid #ccc;
+  height:25px;
+  padding:1em;
+}
+
+#header h2{
+		text-shadow: #fff 0px 1px 0px;
+		color:#4b4f5d;
+}
+
+select#service{
+	
+}
+
+#left_nav {
+	padding:1em;
+	width:200px;
+	float:left;
+}
+
+#left_nav ul {
+	  list-style:none; 
+	  padding:0;
+}
+  #main {
+	  padding:1em;
+	  float:left;
+  
+  }
+
+.login_info{
+	
+	float:left;
+}
+
+.login_info p{
+	height:30px;
+	width:100%;
+	float:left;
+	padding:0px 0px 3px 0px;
+}
+
+
+
+.login_info label{
+	position:relative;
+	font-weight:bold;
+	float:left;
+	color:#4B4F5D;
+	text-shadow:0 1px 0 #FFFFFF;
+	clear:left;
+	font-size:14px;
+	letter-spacing:.02em;
+	bottom:-8px;
+}
+
+.login_info input{
+	border:1px solid #DEDEDE;
+	float:right;
+	background-color:#F6F6F6;
+	padding:10px;
+	
+-webkit-border-top-left-radius: 4px;
+-webkit-border-top-right-radius: 4px;
+-webkit-border-bottom-right-radius: 4px;
+-webkit-border-bottom-left-radius: 4px;
+-moz-border-radius-topleft: 4px;
+-moz-border-radius-topright: 4px;
+-moz-border-radius-bottomright: 4px;
+-moz-border-radius-bottomleft: 4px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+border-bottom-left-radius: 4px;
+
+}
+
+#chooser{margin:auto;}
+
+input.text_field{
+  width:315px;
+}
+
+
+
+.login_info p.last{
+	padding-bottom:0px;
+	margin:0px;
+
+}
+
+.login_info p input[type="submit"]{
+  background-color:#F6F6F6;
+  text-shadow:0 1px 0 #DEDEDE;
+  font-weight:bold;
+  width:75px;
+  height:30px;
+  padding:0px 0px 2px 0px;
+}
+
+.login_info p input[type="submit"]:hover{
+  background-color:#DEDEDE;
+}
+
+.post{
+  background:none repeat scroll 0 0 #FFFFFF;
+  border:1px solid #CCCCCC;
+  margin-bottom:1em;
+  padding:1em;
+}
+
+.post_title{
+  background:none repeat scroll 0 0 #EEEEEE;
+  margin-bottom:10px;
+  padding:0.5em;
+}
+
+.post_body{
+  background:none repeat scroll 0 0 #EEEEEE;
+  margin-bottom:10px;
+  width:386px;
+  overflow:auto;
+  padding:0.5em;
+}
+
+.post_tags{
+  background:none repeat scroll 0 0 #EEEEEE;
+  margin-bottom:10px;
+  padding:0.5em;
+}
+
+textarea{
+  border:1px solid #CCCCCC;
+  margin:10px 0;
+  width:430px;
+  height:200px;
+}
