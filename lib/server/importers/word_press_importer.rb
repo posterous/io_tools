@@ -12,11 +12,12 @@ class WordPressImporter
     recent_posts MAX_POSTS_TO_REQUEST
   end
   
-  conform do 
-    set :title,         entry['title']
-    set :body,          entry['description']
-    set :display_date,  entry['dateCreated'].to_time.utc
-    set :tags,          entry['mt_keywords'].split(",")
+  conform do |incoming, conformed| 
+    conformed.title         = incoming['title']
+    conformed.body          = incoming['description']
+    conformed.display_date  = incoming['dateCreated'].to_time.utc
+    conformed.tags          = incoming['mt_keywords'].split(",")
+    conformed
   end
   
   # Methods below are helpers for detecting RSD for the
