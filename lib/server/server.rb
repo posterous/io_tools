@@ -8,8 +8,7 @@ dir = File.expand_path(File.dirname(__FILE__))
 
 require dir+'/importers/posterous_feed_importer'
 require dir+'/importers/posterous_api_importer'
-
-
+require dir+'/importers/word_press_importer'
 
 module IoTools
   

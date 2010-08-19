@@ -7,7 +7,7 @@ module IoTools
       end
 
       def rpc method, *args
-        server.call("metaWeblog.#{method.to_s}", self.metaweblog_id, self.credentials[:username], self.credentials[:password], *args)
+        server.call("metaWeblog.#{method.to_s}", self.metaweblog_id, self.params['username'], self.params['password'], *args)
       end
 
       def recent_posts num

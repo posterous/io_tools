@@ -31,7 +31,7 @@ class WordPressImporter
   end  
   
   def html
-    @html ||= open self.import_url
+    @html ||= open self.params['import_url']
   end
   
   def rsd_url
