@@ -1,6 +1,6 @@
 module IoTools
   module Helpers
-    module XmlRpc
+    module MetaWeblog 
       
       def server
         @server ||= XMLRPC::Client.new2(api_url, nil, 300)

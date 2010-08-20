@@ -2,7 +2,7 @@
 
 class WordPressImporter
   include IoTools::Importer
-  include IoTools::Helpers::XmlRpc
+  include IoTools::Helpers::MetaWeblog
 
   RSD_SELECTOR          = 'link[rel=EditURI]'
   METAWEB_SELECTOR      = 'api[name=MetaWeblog]'

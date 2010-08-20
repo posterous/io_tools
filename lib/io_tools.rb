@@ -2,7 +2,7 @@
 
 require "io_tools/importer"
 require "io_tools/helpers/rss_feed"
-require "io_tools/helpers/xml_rpc"
+require "io_tools/helpers/meta_weblog"
 
 module IoTools
   class ItemStruct < OpenStruct
