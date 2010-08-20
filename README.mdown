@@ -1,6 +1,6 @@
 ## io_tools ##
 
-Extracted modules from the Posterous Blog Importer. A way to structure code the code needed to connect to various APIs and conform the results to your liking. At it's core is a very simple module that tries to keep things sane when communicating with a multitude of platforms.
+Extracted modules from the Posterous Blog Importer. A way to structure the code needed to connect to various APIs and conform the results to your liking. At it's core is a very simple module that tries to keep things sane when communicating with a multitude of platforms.
 
 ## Installation ##
 
