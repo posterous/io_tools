@@ -15,8 +15,6 @@ begin
     gem.add_development_dependency "mocha"
     
     gem.add_dependency "nokogiri", ">= 1.4.2"
-    gem.add_dependency "sinatra"
-    gem.add_dependency "haml"
     gem.add_dependency "xml-simple"
     gem.add_dependency "feedtools", ">= 0.2.29"
     gem.add_dependency "vegas",           "~> 0.1.2"
