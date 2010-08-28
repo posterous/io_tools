@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{io_tools}
-  s.version = "0.2.3"
+  s.version = "0.2.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Christopher Burnett"]
-  s.date = %q{2010-08-18}
+  s.date = %q{2010-08-27}
   s.default_executable = %q{io-server}
   s.description = %q{Extracted modules from the Posterous Blog Importer. Used for conforming RSS Feeds or results from one API to another.}
   s.email = %q{signalstatic@gmail.com}
@@ -29,8 +29,8 @@ Gem::Specification.new do |s|
      "io_tools.gemspec",
      "lib/io_tools.rb",
      "lib/io_tools/helpers.rb",
+     "lib/io_tools/helpers/meta_weblog.rb",
      "lib/io_tools/helpers/rss_feed.rb",
-     "lib/io_tools/helpers/xml_rpc.rb",
      "lib/io_tools/importer.rb",
      "lib/server/config.ru",
      "lib/server/importers/posterous_api_importer.rb",
@@ -52,7 +52,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/posterous/io_tools}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.3.5}
   s.summary = %q{Import framework for Blogs and Feeds}
   s.test_files = [
     "spec/io_tools/helpers/rss_feed.rb",
@@ -66,12 +66,10 @@ Gem::Specification.new do |s|
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<rspec>, [">= 1.2.9"])
       s.add_development_dependency(%q<mocha>, [">= 0"])
       s.add_runtime_dependency(%q<nokogiri>, [">= 1.4.2"])
-      s.add_runtime_dependency(%q<sinatra>, [">= 0"])
-      s.add_runtime_dependency(%q<haml>, [">= 0"])
       s.add_runtime_dependency(%q<xml-simple>, [">= 0"])
       s.add_runtime_dependency(%q<feedtools>, [">= 0.2.29"])
       s.add_runtime_dependency(%q<vegas>, ["~> 0.1.2"])
@@ -79,8 +77,6 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<rspec>, [">= 1.2.9"])
       s.add_dependency(%q<mocha>, [">= 0"])
       s.add_dependency(%q<nokogiri>, [">= 1.4.2"])
-      s.add_dependency(%q<sinatra>, [">= 0"])
-      s.add_dependency(%q<haml>, [">= 0"])
       s.add_dependency(%q<xml-simple>, [">= 0"])
       s.add_dependency(%q<feedtools>, [">= 0.2.29"])
       s.add_dependency(%q<vegas>, ["~> 0.1.2"])
@@ -89,8 +85,6 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rspec>, [">= 1.2.9"])
     s.add_dependency(%q<mocha>, [">= 0"])
     s.add_dependency(%q<nokogiri>, [">= 1.4.2"])
-    s.add_dependency(%q<sinatra>, [">= 0"])
-    s.add_dependency(%q<haml>, [">= 0"])
     s.add_dependency(%q<xml-simple>, [">= 0"])
     s.add_dependency(%q<feedtools>, [">= 0.2.29"])
     s.add_dependency(%q<vegas>, ["~> 0.1.2"])
